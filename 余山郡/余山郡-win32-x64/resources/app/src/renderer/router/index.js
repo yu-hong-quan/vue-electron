@@ -4,12 +4,17 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 export default new Router({
-  mode:'hash',
+  base:process.env.BASE_URL,
   routes: [
     {
-      path: '/',
+      path: '/home',
       name: 'home',
       component: require('@/view/Home').default
+    },
+    {
+      path: '/',
+      name: 'login',
+      component: require('@/view/Login').default
     },
     {
       path: '/landing-page',
@@ -17,8 +22,13 @@ export default new Router({
       component: require('@/components/LandingPage').default
     },
     {
+      path: '/404',
+      name: '404',
+      component: require('@/components/404').default
+    },
+    {
       path: '*',
-      redirect: '/'
+      redirect: '/404'
     }
   ]
 })

@@ -28,7 +28,7 @@ function createWindow() {
     useContentSize: true,
     allowRunningInsecureContent: true,
     experimentalCanvasFeatures: true,
-    icon: require("path").join(__dirname, '../../build/icons/HTMLicon.png'), // icon
+    icon: require("path").join(__static, './HTMLicon.png'), 
     resizable: true,//可否缩放
     movable: true//可否移动
   });
@@ -44,7 +44,7 @@ app.on("ready", () => {
   // if (isDevelopment && !process.env.IS_TEST) {
   // }
   // 设置托盘
-  const tray = new Tray(require("path").join(__dirname, '../../build/icons/HTMLicon.png'))
+  const tray = new Tray(require("path").join(__static, './HTMLicon.png'))
   // 设置托盘菜单
   const trayContextMenu = Menu.buildFromTemplate([
     {

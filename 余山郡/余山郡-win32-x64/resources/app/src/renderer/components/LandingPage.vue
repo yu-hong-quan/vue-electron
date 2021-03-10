@@ -3,7 +3,7 @@
     <img id="logo" src="~@/assets/logo.png" alt="electron-vue">
     <system-information></system-information>
     <main>
-      <el-button @click="message" type="success" icon="el-icon-search" round>提交</el-button>
+      <el-button @click="message" type="success" icon="el-icon-search" round>跳转</el-button>
     </main>
   </div>
 </template>
@@ -23,7 +23,7 @@
         this.$electron.shell.openExternal(link)
       },
       message(){
-
+        this.$router.push({name:'404'})
       }
     }
   }

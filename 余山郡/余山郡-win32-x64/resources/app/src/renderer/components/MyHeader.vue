@@ -1,5 +1,6 @@
 <template>
   <div id="myHeader">
+    <div></div>
     <div class="titlebtn">
       <div class="min" @click="min">
         <img src="@/assets/min.png" alt />
@@ -41,20 +42,25 @@ export default {
 <style lang="scss">
 #myHeader {
   width: 100%;
-  height: 40px;
-  line-height:40px;
+  height: 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background:#272822;
   //可以拖拽
   -webkit-app-region: drag;
-  position: fixed;
+  // position: fixed;
   top: 0;
+  z-index: 9999;
 }
 
 .titlebtn {
   position: relative;
   width: 200px;
-  height: 50px;
-  line-height: 50px;
+  height: 100%;
+   display: flex;
+  align-items: center;
+  justify-content: space-between;
   float: right;
 
   //不可拖拽
