@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <MyHeader />
-    <router-view></router-view>
+	<MyHeader/>
+	<router-view></router-view>
   </div>
 </template>
 
@@ -9,9 +9,11 @@
   import MyHeader from "@/components/MyHeader.vue";
   export default {
     name: 'my_electron',
+	
     components: {
       MyHeader,
     },
+	
   }
 </script>
 <style lang="scss">
@@ -20,6 +22,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+	font-family: 'Source Sans Pro', sans-serif; 
   }
    * {
     margin: 0px;

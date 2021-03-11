@@ -1,6 +1,11 @@
 <template>
   <div id="Home">
-    <el-button @click="message" type="success" icon="el-icon-search" round>跳转</el-button>
+	<div>
+		<el-button @click="message" type="success" icon="el-icon-search" round>跳转</el-button>
+	</div>
+	<div>
+		<router-view></router-view>
+	</div>
   </div>
 </template>
 
@@ -19,7 +24,7 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
   * {
@@ -28,7 +33,7 @@
     padding: 0;
   }
 
-  body { font-family: 'Source Sans Pro', sans-serif; }
-
-  
+  #Home{
+	  
+  }
 </style>

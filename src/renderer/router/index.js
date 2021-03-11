@@ -9,7 +9,20 @@ export default new Router({
     {
       path: '/home',
       name: 'home',
-      component: require('@/view/Home').default
+      component: require('@/view/Home').default,
+	  meta:{title:'首页'},
+	  children:[
+		{
+		    path: '/userInfo',
+		    name: 'userInfo',
+		    component: resolve => require(['@/components/UserInfo'], resolve),
+		    meta: { //配置路由元信息表
+		        title: '用户信息',
+		        keepAlive: true, // 需要被缓存
+		        needLogin: true // 需要登录
+		    },
+		},
+	  ]
     },
     {
       path: '/',

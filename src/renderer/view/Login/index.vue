@@ -190,15 +190,17 @@ export default {
         this.MixinMessage("请完成滑动验证！", "error");
         return false;
       }
-      $http.login(goData).then(data => {
-        if (data.code != 200) {
-          this.MixinMessage(data.message, "error");
-          return false;
-        }
-        this.MixinMessage(data.message, "success");
-        // localStorage.setItem("token", "yesLogin");
-        this.$router.push({ name:'home' });
-      });
+	  this.MixinMessage('登录成功，欢迎来到余山郡', "success");
+	  this.$router.push({ name:'home' });
+      // $http.login(goData).then(data => {
+      //   if (data.code != 200) {
+      //     this.MixinMessage(data.message, "error");
+      //     return false;
+      //   }
+      //   this.MixinMessage(data.message, "success");
+      //   // localStorage.setItem("token", "yesLogin");
+      //   this.$router.push({ name:'home' });
+      // });
     },
     scan() {
       var _this = this;
@@ -252,7 +254,7 @@ export default {
 <style scoped lang="scss">
 .login {
   width: 100%;
-  height: 94%;
+  height: 95%;
   background: url("https://static.runoob.com/images/mix/4781442-d6a8c2e5714b4c44.png")
     no-repeat;
   background-size: cover;

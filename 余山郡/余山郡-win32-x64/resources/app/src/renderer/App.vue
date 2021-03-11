@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <MyHeader />
-    <router-view></router-view>
+	<keep-alive>
+		<MyHeader/>
+	</keep-alive>
+	<router-view></router-view>
   </div>
 </template>
 
@@ -9,9 +11,11 @@
   import MyHeader from "@/components/MyHeader.vue";
   export default {
     name: 'my_electron',
+	
     components: {
       MyHeader,
     },
+	
   }
 </script>
 <style lang="scss">
